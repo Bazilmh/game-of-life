@@ -1,0 +1,30 @@
+# Project: Project1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Untitled1.o $(RES)
+LINKOBJ  = Untitled1.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib" -L"D:/Dev-Cpp/SDL2-2.0.8/i686-w64-mingw32/lib" -L"D:/Dev-Cpp/SDL2-2.0.8/i686-w64-mingw32/lib" -mwindows -lmingw32 -lSDL2main -lSDL2 ../../lib/libwinmm.a  
+INCS =  -I"D:/Dev-Cpp/include"  -I"D:/Dev-Cpp/SDL2-2.0.8/i686-w64-mingw32/include/SDL2" 
+CXXINCS =  -I"D:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/Dev-Cpp/include/c++/3.4.2"  -I"D:/Dev-Cpp/include"  -I"D:/Dev-Cpp/SDL2-2.0.8/i686-w64-mingw32/include/SDL2"  -I"D:/Dev-Cpp/SDL2-2.0.8/i686-w64-mingw32/include/SDL2" 
+BIN  = Project1.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Project1.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Project1.exe" $(LIBS)
+
+Untitled1.o: Untitled1.cpp
+	$(CPP) -c Untitled1.cpp -o Untitled1.o $(CXXFLAGS)
