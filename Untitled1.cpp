@@ -212,30 +212,6 @@ if(buffer[(640*j)+i] == 1)
 //------------------------------------------------------------------------------
 void setup()
 {
-/*
-for(int i=100;i<300;i++)
-{
-
-for(int j=100;j<300;j++)
-{
-
-buffer[(640*j)+i] = 1;
-       
-}
-        
-}
-*/
-
-glider(100,100);
-glider(99,103);
-
-
-
-glider(200,100);
-glider(199,103);
-
-
-
 
 }
 
@@ -306,6 +282,16 @@ int main(int argc, char ** argv)
                       SDL_GetMouseState(&MOUSE_X,&MOUSE_Y);
                       glider_r(MOUSE_X,MOUSE_Y);
                       }
+                      else
+                      if(char(event.key.keysym.sym) == 'c')
+                      {
+                      
+                      for(int i=0;i<(640*480);i++)
+                      {buffer[i] = 0;}                              
+                     
+                      
+                      }
+                      
                       
                                
                     }
